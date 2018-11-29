@@ -9,49 +9,56 @@ namespace ProjetoTransporte
     class Passageiros
     {
         #region Atributos
-        private int proximoId;
-        private Queue<Passageiro> filaPassageiros;
+        private Queue<Passageiro> lsPassageiros;
+        private int id;
         #endregion
 
 
         #region propriedades
-        public int ProximoId
+        internal Queue<Passageiro> LsPassageiros
         {
             get
             {
-                return proximoId;
+                return lsPassageiros;
             }
 
             set
             {
-                proximoId = value;
+                lsPassageiros = value;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
             }
         }
         #endregion
 
-        #region proteção
-        public Queue<Passageiro> Filapassageiros
-        {
-            get { return filaPassageiros; }
-        }
-
-        
-        #endregion
-
+     
         #region construtor
         public Passageiros()
         {
-            filaPassageiros = new Queue<Passageiro>();
-            this.proximoId = 1;
+            LsPassageiros = new Queue<Passageiro>();
+            id = 0;
         }
         #endregion
 
-        #region metodo
-        public void gerar(String nome)
+        #region metodos
+        public void addPassageiro()
         {
-            Filapassageiros.Enqueue(new Passageiro(nome,proximoId));
-            proximoId++;
+            int inscricao = id + 1;
+            id++;
+            LsPassageiros.Enqueue(new Passageiro(inscricao));
         }
         #endregion
+
     }
 }

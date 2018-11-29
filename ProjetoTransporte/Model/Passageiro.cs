@@ -10,42 +10,27 @@ namespace ProjetoTransporte
     {
 
         #region atribultos
-        private string nome;
-        private int codigo;
+        private int inscricao;
         #endregion
 
         #region construtor
-        public Passageiro(string nome, int codigo)
+        public Passageiro(int inscricao)
         {
-            this.nome = nome;
-            this.codigo = codigo;
+            Inscricao = inscricao;
         }
         #endregion
 
         #region propriedades
-        public string Nome
+        public int Inscricao
         {
             get
             {
-                return nome;
+                return inscricao;
             }
 
             set
             {
-                nome = value;
-            }
-        }
-
-        public int Codigo
-        {
-            get
-            {
-                return codigo;
-            }
-
-            set
-            {
-                codigo = value;
+                inscricao = value;
             }
         }
         #endregion
@@ -53,7 +38,7 @@ namespace ProjetoTransporte
         #region metodos
         public String dadosCompletos()
         {
-            return nome + "-" + codigo;
+            return "Inscrição : " + inscricao;
         }
         #endregion
 

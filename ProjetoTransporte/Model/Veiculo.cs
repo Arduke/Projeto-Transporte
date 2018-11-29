@@ -10,9 +10,9 @@ namespace ProjetoTransporte
     {
         #region atributos
         private string placa;
-        private string nomeMotorista;
-        private int capacidade;
-        public Queue<Passageiro> passageiros; 
+        private string nome;
+        private int lotacao;
+
         #endregion
 
         #region propriedades
@@ -29,52 +29,44 @@ namespace ProjetoTransporte
             }
         }
 
-        public string NomeMotorista
+        public string Nome
         {
             get
             {
-                return nomeMotorista;
+                return nome;
             }
 
             set
             {
-                nomeMotorista = value;
+                nome = value;
             }
         }
 
-        public int Capacidade
+        public int Lotacao
         {
             get
             {
-                return capacidade;
+                return lotacao;
             }
 
             set
             {
-                capacidade = value;
+                lotacao = value;
             }
         }
         #endregion
 
         #region construtor
-        public Veiculo(string placa, string nomeMotorista, int capacidade)
+        public Veiculo(string placa, string nome, int lotacao)
         {
-            this.placa = placa;
-            this.nomeMotorista = nomeMotorista;
-            this.capacidade = capacidade;
+            Placa = placa;
+            Nome = nome;
+            Lotacao = lotacao;
         }
         #endregion
 
         #region metodo
-        public void pegarPassageiros()
-        {
-            foreach 
-        }
-        public void entregarPassageiros()
-        {
-
-        }
-
+       
         #endregion
     }
 }
